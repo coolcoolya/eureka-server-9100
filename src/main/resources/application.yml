@@ -8,7 +8,7 @@ eureka:
 #客户端注册到注册中心的地址，当前注册中心，需要注册到端口为8100的注册中心上，端口为8100的注册中心，需要注册到当前9100的注册中心上，你中有我，我中有你
   client:
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:8100/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8100/eureka/,http://${eureka.instance.hostname}:10100/eureka/
 
 #因为自己是注册中心，不需要将自己注册给自己的注册中心（集群的时候需要设置为true）
     register-with-eureka: true
